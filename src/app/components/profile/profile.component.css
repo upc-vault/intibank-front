@@ -1,0 +1,45 @@
+.bg-color-1 { 
+	background: #eef2e2; 
+}
+	
+.bg-color-2 { 
+	background: #9fd3c7; 
+}
+
+.bg-color-3 { 
+	background: #385170; 
+}
+
+.bg-color-4 { 
+	background: #142d4c; 
+}
+
+.avatar-icon {
+	text-align: center;
+    background-color: #f5f9ee;
+    border-radius: 50%;
+    font-size: 40px;
+    color: white;
+    width: 200px;
+    height: 200px;
+    margin: auto;
+    line-height: 100px;
+    overflow: hidden;
+}
+
+.avatar-icon img {
+    width: 100%;
+    height: 100%;
+}
+
+
+.logout {
+    border-radius: 30px;
+    padding: 10px 20px;
+    font-size: 18px;
+    font-weight: bold;
+    background-color: #5791ff;
+    border: none;
+    color: white;
+    margin-top: 20px;
+}

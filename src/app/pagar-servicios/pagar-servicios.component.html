@@ -1,0 +1,39 @@
+<div class="container mt-5">
+  <div class="card shadow">
+    <div class="card-header bg-primary text-white">
+      <h2 class="mb-0">Pagar Servicios</h2>
+    </div>
+    <div class="card-body">
+      <div class="mb-3">
+        <label for="numeroSuministro" class="form-label">Número de Suministro:</label>
+        <input
+          type="text"
+          id="numeroSuministro"
+          [(ngModel)]="numeroSuministro"
+          class="form-control"
+        />
+      </div>
+      <div class="mb-3">
+        <label for="cuenta" class="form-label">Cuenta:</label>
+        <select
+          id="cuenta"
+          [(ngModel)]="cuentaSeleccionada"
+          class="form-select"
+        >
+          <option
+            *ngFor="let account of userAccounts" 
+            [ngValue]="account"
+          >
+          {{ account.card_number }} (Saldo: {{ account.balance | number:'1.2-2' }})
+          </option>
+        </select>
+      </div>
+      <div class="d-grid mb-3">
+        <button class="btn btn-success" (click)="pagar()">Pagar</button>
+      </div>
+      <div class="d-grid">
+        <button routerLink="/profile" class="btn btn-secondary">Salir</button>
+      </div>
+    </div>
+  </div>
+</div>

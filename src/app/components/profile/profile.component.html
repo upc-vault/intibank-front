@@ -1,0 +1,59 @@
+<section class="py-5">
+  <div class="container">
+    <div class="card shadow">
+      <div class="card-body">
+        <div class="row align-items-center">
+          <div class="col-md-4 text-center">
+            <div class="avatar-icon mb-3">
+              <img
+                src="../../../assets/account-icon-png-2.jpg"
+                alt="avatar-icon"
+                class="rounded-circle"
+                style="width: 150px; height: 150px; object-fit: cover; border: 2px solid #ddd;"
+              />
+            </div>
+          </div>
+          <div class="col-md-8">
+            <div class="row mb-3">
+              <div class="col-md-4">
+                <p class="mb-0 font-weight-bold">Nombre</p>
+              </div>
+              <div class="col-md-8">
+                <p class="text-muted mb-0">{{ userProfile?.name }}</p>
+              </div>
+            </div>
+            <div class="row mb-3">
+              <div class="col-md-4">
+                <p class="mb-0 font-weight-bold">Email</p>
+              </div>
+              <div class="col-md-8">
+                <p class="text-muted mb-0">{{ userProfile?.email }}</p>
+              </div>
+            </div>
+            <div class="row mb-3">
+              <div class="col-md-4">
+                <p class="mb-0 font-weight-bold">Teléfono</p>
+              </div>
+              <div class="col-md-8">
+                <p class="text-muted mb-0">{{ userProfile?.phone }}</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="mt-4 text-center">
+      <button routerLink="/pagar-servicios" class="btn btn-primary mr-2">
+        Pagar Servicios
+      </button>
+      <button class="btn btn-danger" (click)="onLogoutClick()" routerLink="/login">
+        Salir
+      </button>
+    </div>
+
+    <div class="mt-5">
+      <app-accounts></app-accounts>
+    </div>
+  </div>
+</section>
