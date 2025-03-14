@@ -10,6 +10,9 @@ import { LoginComponent } from './components/login/login.component';
 import { ProfileComponent } from './components/profile/profile.component';
 import { MatIconModule } from "@angular/material/icon";
 import { AccountsComponent } from './components/accounts/accounts.component';
+import { RouterModule, Routes } from '@angular/router';
+import { PagarServiciosComponent } from './pagar-servicios/pagar-servicios.component';
+
 
 
 @NgModule({
@@ -18,7 +21,8 @@ import { AccountsComponent } from './components/accounts/accounts.component';
     RegisterComponent,
     LoginComponent,
     ProfileComponent,
-    AccountsComponent
+    AccountsComponent,
+    PagarServiciosComponent
   ],
   imports: [
     BrowserModule,
