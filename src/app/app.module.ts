@@ -11,7 +11,8 @@ import { ProfileComponent } from './components/profile/profile.component';
 import { MatIconModule } from "@angular/material/icon";
 import { AccountsComponent } from './components/accounts/accounts.component';
 import { LoanComponent } from './components/loan/loan.component';
-
+import { RouterModule, Routes } from '@angular/router';
+import { PagarServiciosComponent } from './pagar-servicios/pagar-servicios.component';
 
 @NgModule({
   declarations: [
