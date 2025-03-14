@@ -1,0 +1,46 @@
+<div class="container pt-5 mt-5">
+  <div class="form-container">
+    <div class="registration-form">
+      <form [formGroup]="form" (ngSubmit)="onSubmit()">
+        <div class="form-icon">
+          <span>
+            <img src="../../../assets/account-icon-png-2.jpg" alt="avatar-icon">
+          </span>
+        </div>
+        <div class="form-group">
+          <input type="text" class="form-control item" id="email" placeholder="Email" formControlName="email">
+          <div class="alert alert-danger" *ngIf="email?.invalid && (email?.touched || email?.dirty)">
+            <span *ngIf="email?.errors!['required']">El email es obligatorio</span>
+            <span *ngIf="email?.errors!['email']">Introduce un email válido</span>
+          </div>
+        </div>
+        <div class="form-group">
+          <input type="password" class="form-control item" id="password" placeholder="Password"
+            formControlName="password">
+          <div class="alert alert-danger" *ngIf="password?.invalid && (password?.touched || password?.dirty)">
+            <span *ngIf="password?.errors!['required']">La contraseña es obligatoria</span>
+            <span *ngIf="password?.errors!['minlength']">La contraseña debe tener por lo menos 6 carácteres</span>
+          </div>
+        </div>
+        <div *ngIf="errorMessage" class="alert alert-danger">
+          {{ errorMessage }}
+        </div>
+        <div class="form-group login-btn">
+          <div class="row">
+            <div class="col-3">
+              <input type="submit" class="btn btn-block create-account" value="Login" />
+            </div>
+            <div class="col">
+              <span class="d-inline-block" style="margin-top: 2em;">
+                Todavía no tienes una cuenta?
+                <a routerLink="/register">
+                    Registrate
+                </a>
+              </span>
+            </div>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
