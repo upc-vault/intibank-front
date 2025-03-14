@@ -1,0 +1,32 @@
+.bg-color-1 { 
+	background: #eef2e2; 
+}
+	
+.bg-color-2 { 
+	background: #9fd3c7; 
+}
+
+.bg-color-3 { 
+	background: #385170; 
+}
+
+.bg-color-4 { 
+	background: #142d4c; 
+}
+.card {
+  height: 100%;
+}
+
+.new-account {
+  cursor: pointer;
+}
+
+.new-account span {
+  font-size: 19px;
+  font-weight: bold;
+
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%,-50%);
+}

@@ -1,0 +1,37 @@
+<div class="container mt-5">
+  <h2>Simular Préstamo</h2>
+
+  <!-- Formulario para simulación -->
+  <form (ngSubmit)="simulateLoan()">
+    <div class="mb-3">
+      <label>Monto del Préstamo</label>
+      <input type="number" class="form-control" [(ngModel)]="loanSimulation.amount_loan" name="amount_loan" required>
+    </div>
+
+    <div class="mb-3">
+      <label>Meses</label>
+      <input type="number" class="form-control" [(ngModel)]="loanSimulation.months" name="months" required>
+    </div>
+
+    <button class="btn btn-primary" type="submit">Simular</button>
+  </form>
+
+  <!-- Resultados de simulación -->
+  <div *ngIf="simulationResult" class="card mt-4">
+    <div class="card-body">
+      <h5>Resultado de la Simulación</h5>
+      <p><strong>Monto:</strong> {{ simulationResult.amount_loan }}</p>
+      <p><strong>Interés:</strong> {{ simulationResult.interest_rate }}%</p>
+      <p><strong>Cuotas:</strong> {{ simulationResult.months }}</p>
+      <p><strong>Fecha Inicio:</strong> {{ simulationResult.date_loan_start }}</p>
+      <p><strong>Fecha Fin:</strong> {{ simulationResult.date_loan_end }}</p>
+      <p><strong>Pago mensual:</strong> {{ simulationResult.monthly_payment | number:'1.2-2' }}</p>
+
+      <!-- Solicitar préstamo -->
+      <div class="mt-3">
+        <input type="text" class="form-control mb-2" [(ngModel)]="dni" placeholder="Ingresa tu DNI">
+        <button class="btn btn-success" (click)="confirmLoan()">Solicitar Préstamo</button>
+      </div>
+    </div>
+  </div>
+</div>

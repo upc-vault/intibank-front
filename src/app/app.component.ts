@@ -9,7 +9,11 @@ import { AuthenticationService } from './services/authentication/authentication.
 export class AppComponent {
   title = 'bank-front-end';
 
-  constructor(private authService: AuthenticationService) {};
+  constructor(public authService: AuthenticationService) {};
+
+  isLoggedIn(): boolean {
+    return this.authService.isAuthenticated();
+  }
 
   // register(registerModel: Register) {
   //   this.authService.register(registerModel).subscribe();
