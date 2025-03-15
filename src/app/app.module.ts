@@ -21,7 +21,8 @@ import { PagarServiciosComponent } from './pagar-servicios/pagar-servicios.compo
     LoginComponent,
     ProfileComponent,
     AccountsComponent,
-    LoanComponent
+    LoanComponent,
+    PagarServiciosComponent
   ],
   imports: [
     BrowserModule,
